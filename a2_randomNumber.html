@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        function getRandom(){
+    // ham random xuat ra so ngau nhien tu 0-99
+            const r = Math.random()*1000;
+            var abc = Math.floor(r);
+            // ham dem chuoi ky tu
+            if(abc < 10){abc = "000"+abc}
+            else if(abc<100){abc = "00" + abc}
+            else if(abc<1000){abc = "0" + abc}
+            return abc;
+        }
+        console.log(getRandom())
+        var Title = "<h2 style = 'color: #ff6600'>", endTitle = "</h2>";
+        document.write(Title + getRandom() + endTitle);
+        ///////////////////
+        // ham ve ngoi sao
+        /**/
+        function veHinh1(n) {
+            var br = "<br>"
+            var space = "&nbsp; &nbsp;&nbsp;"
+            for(let i = 0; i < n; i++) {
+                let s = '';
+                for(let j = 0; j <= i; j++) {
+                    s += j + 1;
+                    //s+='*'//hoac
+                }
+                console.log(s);
+                document.writeln(space + s + br)
+            }
+        }
+        veHinh1(8)
+    </script>
+</body>
+</html>
